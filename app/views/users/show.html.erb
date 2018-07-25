@@ -11,7 +11,7 @@
   </tr>
   <tr>
     <th>自画像</th>
-    <td><%= image_tag(@user.picture_url) if @user.picture.present? %></td>
+    <td><%= image_tag(@user.picture_url, :size =>'320x320') if @user.picture.present? %></td>
 　</tr>
 </table>
 
