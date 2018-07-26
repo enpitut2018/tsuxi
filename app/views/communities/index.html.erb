@@ -7,6 +7,7 @@
     <% @communities.each do |community| %>
       <tr>
         <td><center><%= community.name %><br>（概要：<%= community.content %>）</center></td>
+        <td><%= link_to "参加", community_add_path(community),method: :post %>
         <td><%= link_to '詳細', community %></td>
         <td><%= link_to '編集', edit_community_path(community) %></td>
         <td><%= link_to '削除', community, method: :delete, data: { confirm: '本当に削除しますか?' } %></td>
