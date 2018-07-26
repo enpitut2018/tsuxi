@@ -18,5 +18,16 @@
 <% if current_user?(@user) %>
 <p><%= link_to '編集', edit_user_path %></p>
 <br>
-<p>参加しているコミュニティ一覧</p>
+<h1>参加しているコミュニティ一覧</h1>
+<table border = "1">
+  <tbody>
+        <% @user.communities.uniq.each do |community| %>
+        　<tr>
+            <td><%= community.name %></td>
+            <td><%= link_to 'チャットルームへ', '#' %></td>
+          </tr>
+        <% end %>
+  </tbody>
+</table>
+
 <% end %>

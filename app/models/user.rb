@@ -1,4 +1,7 @@
 class User < ActiveRecord::Base
+    has_many :joins
+    has_many :communities, through: :joins
+
     #名前
     validates :name,  presence: true, length: { maximum: 50 }
     #メール
