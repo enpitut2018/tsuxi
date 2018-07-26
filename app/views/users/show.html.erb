@@ -5,8 +5,14 @@
 <%= image_tag(@user.picture_url, :class => 'user_image' ) if @user.picture.present? %>
 <br><br><br>
 <h1><%= @user.name %></h1>
-<br>
-<h3><%= @user.email %></h3>
+<h3>学類：<%= @user.gakurui %></h3>
+<h3>学年：<%= @user.gakunen %></h3>
+<h3>性別：<%= @user.sex %></h3>
+<h3>サークル：<%= @user.circle %></h3>
+<h3>バイト：<%= @user.bite %></h3>
+<h3>生年月日：<%= @user.birthday %></h3>
+<h3>趣味：<%= @user.hobby %></h3>
+<h3>ひとこと：<%= @user.comment %></h3>
 
 <br><br><br><br><br>
 <% if current_user?(@user) %>
