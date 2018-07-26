@@ -13,3 +13,16 @@
  *= require_tree .
  *= require_self
  */
+<<<<<<< HEAD
+=======
+
+/* miscellaneous */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+>>>>>>> 7ee19706c05686b50f07f44a8c4fe9407511e63c

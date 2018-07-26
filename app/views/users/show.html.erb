@@ -1,20 +1,16 @@
-<h1>ユーザ情報</h1>
+<br><br>
+<h1>マイページ</h1>
+<br><br>
 
-<table border="1">
-  <tr>
-    <th>名前</th>
-    <td><%= @user.name %></td>
-  </tr>
-  <tr>
-    <th>メールアドレス</th>
-    <td><%= @user.email %></td>
-  </tr>
-  <tr>
-    <th>自画像</th>
-    <td><%= image_tag(@user.picture_url, :size =>'320x320') if @user.picture.present? %></td>
-　</tr>
-</table>
+<%= image_tag(@user.picture_url, :class => 'user_image' ) if @user.picture.present? %>
+<br><br><br>
+<h1><%= @user.name %></h1>
+<br>
+<h3><%= @user.email %></h3>
 
+<br><br><br><br><br>
 <% if current_user?(@user) %>
 <p><%= link_to '編集', edit_user_path %></p>
+<br>
+<p>参加しているコミュニティ一覧</p>
 <% end %>
