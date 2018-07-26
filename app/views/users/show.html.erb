@@ -1,0 +1,16 @@
+<br><br>
+<h1>マイページ</h1>
+<br><br>
+
+<%= image_tag(@user.picture_url, :class => 'user_image' ) if @user.picture.present? %>
+<br><br><br>
+<h1><%= @user.name %></h1>
+<br>
+<h3><%= @user.email %></h3>
+
+<br><br><br><br><br>
+<% if current_user?(@user) %>
+<p><%= link_to '編集', edit_user_path %></p>
+<br>
+<p>参加しているコミュニティ一覧</p>
+<% end %>

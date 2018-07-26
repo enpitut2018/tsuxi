@@ -12,16 +12,16 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>
+    <%= form.label :コミュニティ名 %>
     <%= form.text_field :name, id: :community_name %>
   </div>
 
   <div class="field">
-    <%= form.label :content %>
+    <%= form.label :概要 %>
     <%= form.text_field :content, id: :community_content %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit '作成'%>
   </div>
 <% end %>
