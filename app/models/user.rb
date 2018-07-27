@@ -3,13 +3,13 @@ class User < ActiveRecord::Base
     has_many :communities, through: :joins
     
 
-   validate :check_number_of_users
+   #validate :check_number_of_users
 
-   def check_number_of_users
-     if join.user && join.community.count > 0
-       errors.add(:community, "人数OVER")
-     end
-   end
+   #def check_number_of_users
+    # if join.user && join.community.count > 0
+     #  errors.add(:community, "人数OVER")
+     #end
+   #end
 
     #名前
     validates :name,  presence: true, length: { maximum: 50 }
