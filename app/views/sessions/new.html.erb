@@ -1,4 +1,6 @@
+<% @page_title = "ログイン" %>
 <h1>ログイン</h1>
+<%= flash[:danger] %>
 
 <%= form_for(:session, url: sessions_path) do |f| %>
 

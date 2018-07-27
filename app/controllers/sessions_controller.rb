@@ -8,6 +8,7 @@ class SessionsController < ApplicationController
         sign_in user
         redirect_to user
       else
+        flash.now[:danger] = '無効な値です'
         render 'new'
       end
     end
