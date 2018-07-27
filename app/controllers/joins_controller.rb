@@ -4,7 +4,7 @@ class JoinsController < ApplicationController
     user=current_user
     community=Community.find(params[:community_id])
     if Join.create(user_id: user.id,community_id:community.id)
-    redirect_to community
+      redirect_to community
     else
       redirect_to root_url
     end
@@ -15,7 +15,7 @@ class JoinsController < ApplicationController
     community=Community.find(params[:community_id])
     if join=Join.find_by(user_id: user.id,community_id:community.id)
       join.delete
-      redirect_to users_path(current_user)
+      redirect_to current_user
     else
       redirect_to root_url
     end
