@@ -25,6 +25,8 @@
         　<tr>
             <td><%= community.name %></td>
             <td><%= link_to 'チャットルームへ', '#' %></td>
+            <td><%= link_to "退出",community_delete_path(community),method: :delete %></td>  
+            <td><%= link_to '詳細', community %></td>
           </tr>
         <% end %>
   </tbody>
