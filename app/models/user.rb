@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
    #validate :check_number_of_users
 
    #def check_number_of_users
+
     # if join.user && join.community.count > 0
      #  errors.add(:community, "人数OVER")
      #end
