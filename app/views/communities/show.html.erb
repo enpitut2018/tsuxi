@@ -9,6 +9,11 @@
   <strong>概要:</strong>
   <%= @community.content %>
 </p>
+<p>参加者一覧</p>
+<p><% @community.users.each do |user| %>
+       <%= image_tag(user.picture_url, :class => 'user_image2' ) if user.picture.present? %>
+   <% end %>
+</p>
 
 <%= link_to '編集', edit_community_path(@community) %> |
 <%= link_to '一覧に戻る', communities_path %>

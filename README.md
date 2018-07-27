@@ -1,24 +1,15 @@
-# README
+## 泣くなつぐちゃん 「Tsuxi」
+## エレベーターピッチ
+異性の友達を作りたい。サークルやバイトをしてない人や、新しい人脈を作りたい筑波大生向けの出会い斡旋する「Tsuxi」です。
+これは、
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## https://tsuxi.herokuapp.com/
 
-Things you may want to cover:
+## メンバ-
+古川嗣久
+渡辺郁弥
+堀田優介
+橋下拓也
+岩田楓雅
+岡威久馬
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
