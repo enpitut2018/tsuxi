@@ -45,7 +45,6 @@ ActiveRecord::Schema.define(version: 20180726065041) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "picture"
-    t.integer "community_id"
     t.string "gakurui"
     t.string "gakunen"
     t.string "sex"
@@ -54,6 +53,7 @@ ActiveRecord::Schema.define(version: 20180726065041) do
     t.date "birthday"
     t.string "hobby"
     t.string "comment"
+    t.integer "community_id"
   end
 
 end
