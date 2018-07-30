@@ -7,6 +7,16 @@
 
 <h1>コミュニティ一覧</h1>
 
+<%= form_tag communities_path, :method => 'get' do %> <%#　projects_pathはモデル名で読みかえること %>
+  <p>コミュニティを検索</p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "検索", :name => nil %>
+  <p></p>
+<% end %>
+ 
+ 
+<%= yield %>
+ 
 <table border = "1">
   <tbody>
     <% @communities.each do |community| %>
