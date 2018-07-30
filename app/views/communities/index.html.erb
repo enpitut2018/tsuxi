@@ -1,30 +1,29 @@
 <% @page_title = "コミュニティ一覧" %>
+  <p id="notice"><%= notice %></p>
 
-<p id="notice"><%= notice %></p>
+  <% if flash.now[:notice] %>
+  <% end %>
 
-<% if flash.now[:notice] %>
-<% end %>
+  <h1>コミュニティ一覧</h1>
 
-<h1>コミュニティ一覧</h1>
-
-<table border = "1">
-  <tbody>
+  <table border = "1">
+    <tbody>
     <% @communities.each do |community| %>
       <tr>
         <td><center><%= community.name %><br>（概要：<%= community.content %>）</center></td>
-          <% if !Join.exists?(user_id:current_user.id,community_id:community.id) %>
-            <td><%= link_to "参加", community_add_path(community),method: :post %></td>
-          <% else %>
-            <td><%= link_to "退出",community_delete_path(community),method: :delete %></td>
-          <% end %>
+        <% if !Join.exists?(user_id:current_user.id,community_id:community.id) %>
+          <td><%= link_to "参加", community_add_path(community),method: :post %></td>
+        <% else %>
+          <td><%= link_to "退出",community_delete_path(community),method: :delete %></td>
+        <% end %>
         <td><%= link_to '詳細', community %></td>
         <td><%= link_to '編集', edit_community_path(community) %></td>
         <td><%= link_to '削除', community, method: :delete, data: { confirm: '本当に削除しますか?' } %></td>
       </tr>
     <% end %>
-  </tbody>
-</table>
+    </tbody>
+  </table>
 
-<br>
+  <br>
 
-<%= link_to '新規コミュニティを作成', new_community_path %>
+  <%= link_to '新規コミュニティを作成', new_community_path %>
